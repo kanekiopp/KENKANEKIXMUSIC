@@ -8,7 +8,7 @@ from pyrogram.types import Message
 
 from time import time
 from datetime import datetime
-from config import BOT_IMG, BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
+from config import ALIVE_IMG, BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
 from helpers.filters import command, other_filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -41,12 +41,12 @@ async def alive(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
-        photo=f"{BOT_IMG}",
-        caption=f"""**➮𝐳 ʜɪɪ ɪ ᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
+        photo=f"{ALIVE_IMG}",
+        caption=f"""**➮𝙷𝙸𝙸 𝙸 𝙼 [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
 
 ➮ **𝙰𝙻𝙴𝚇𝙰 𝚂𝚈𝚂𝚃𝙴𝙼 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙵𝙸𝙽𝙴**
 
-➮ **𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 ᴠᴇʀꜱɪᴏɴ : 5.0 Lҽƚҽʂƚ**
+➮ **𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 ᴠᴇʀꜱɪᴏɴ : 0.7.0 𝙻𝙴𝚃𝙴𝚂𝚃**
 
 ➮ **𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 : [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
 
@@ -57,10 +57,10 @@ async def alive(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
