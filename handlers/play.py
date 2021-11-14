@@ -512,7 +512,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔎 **searching...**")
+    lel = await message.reply("**『 𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙾𝙿』**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
     try:
@@ -617,7 +617,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🔎 **searching...**")
+        await lel.edit("**『 𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙾𝙿 』**")
         ydl_opts = {"format": "bestaudio/best"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -796,8 +796,8 @@ async def play(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **𝙽𝙰𝙼𝙴:** [{title[:70]}]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n💡 **Status:** `Playing`\n"
-            + f"🎧 **Request by:** {message.from_user.mention}",
+            caption=f"➪ **𝙽𝙰𝙼𝙴:** [{title[:70]}]({url})\n➪ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n➪ **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"➪ **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -809,9 +809,9 @@ async def lol_cb(b, cb):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Command Syntax", callback_data="cmdsyntax")
+                InlineKeyboardButton("『 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚂𝚈𝙽𝚃𝙰𝚇 』", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("🗑 Close", callback_data="close")
+                InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="close")
             ]
         ]
     )
@@ -871,10 +871,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
-                InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton("『 𝙼𝙴𝙽𝚄 』", callback_data="menu"),
+                InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="cls"),
             ],
-            [InlineKeyboardButton("• Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
@@ -950,7 +950,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔎 **searching...**")
+    lel = await message.reply("**『 𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙾𝙿 』**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
