@@ -1,5 +1,6 @@
-#zaid Project 
-#Ur Motherfucker If U Kang And Don't Give Creadits 🥴
+#𝚉𝙰𝙸𝙳 𝙿𝚁𝙾𝙹𝙴𝙲𝚃 
+#𝚄𝚁 𝙼𝙾𝚃𝙷𝙴𝚁𝙵𝚄𝙲𝙺𝙴𝚁 𝙸𝙵 𝚄 𝙺𝙰𝙽𝙶 𝙰𝙽𝙳 𝙳𝙾𝙽'𝚃 𝙶𝙸𝚅𝙴 𝙲𝚁𝙴𝙳𝙸𝚃𝚂 😡
+#𝙼𝙾𝙳𝙸𝙵𝙴𝙳 𝙵𝙾𝚁 𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 
 
 from os import path
 
