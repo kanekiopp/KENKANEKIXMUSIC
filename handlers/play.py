@@ -499,9 +499,9 @@ async def play(_, message: Message):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Command Syntax", callback_data="cmdsyntax")
+                InlineKeyboardButton("『 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚂𝚈𝙽𝚃𝙰𝚇 』", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("🗑 Close", callback_data="close")
+                InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="close")
             ]
         ]
     )
@@ -593,12 +593,12 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("『 𝙼𝙴𝙽𝚄 』", callback_data="menu"),
+                    InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="cls"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "• Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
@@ -643,12 +643,12 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("『 𝙼𝙴𝙽𝚄 』", callback_data="menu"),
+                    InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="cls"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "• Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
@@ -676,8 +676,8 @@ async def play(_, message: Message):
             emojilist = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}...](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Duration** - `{results[j]['duration']}`\n"
-                toxxt += f" └ ⚡ __Powered by {BOT_NAME}__\n\n"
+                toxxt += f" ├ 💡 **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽** - `{results[j]['duration']}`\n"
+                toxxt += f" └ ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}__\n\n"
                 j += 1
             keyboard = InlineKeyboardMarkup(
                 [
@@ -700,7 +700,7 @@ async def play(_, message: Message):
                             "5️⃣", callback_data=f"plll 4|{query}|{user_id}"
                         ),
                     ],
-                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="cls")],
                 ]
             )
             await message.reply_photo(
@@ -738,12 +738,12 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
-                        InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
+                        InlineKeyboardButton("『 𝙼𝙴𝙽𝚄 』", callback_data="menu"),
+                        InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="cls"),
                     ],
                     [
                         InlineKeyboardButton(
-                            "• Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                            "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
                         )
                     ],
                 ]
