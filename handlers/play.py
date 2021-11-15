@@ -654,8 +654,8 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"  **𝙽𝙰𝙼𝙴:** [{title[:70]}]({url})\n➪ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n➪ **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"➪ **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {message.from_user.mention}",
+            caption=f"🏷  **𝙽𝙰𝙼𝙴 ✘** [{title[:70]}]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂 ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
