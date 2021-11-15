@@ -510,7 +510,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("**『 𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙾𝙿 』**")
+    lel = await message.reply("**𝙰𝙻𝙴𝚇𝙰 𝙾𝙽 𝙵𝙸𝚁𝙴🔥**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -563,7 +563,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("**🔥 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂**")
+    await lel.edit("**𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂🔥**")
     ydl_opts = {"format": "bestaudio/best"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -654,7 +654,7 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"➪ **𝙽𝙰𝙼𝙴:** [{title[:70]}]({url})\n➪ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n➪ **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            caption=f"  **𝙽𝙰𝙼𝙴:** [{title[:70]}]({url})\n➪ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n➪ **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
             + f"➪ **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
