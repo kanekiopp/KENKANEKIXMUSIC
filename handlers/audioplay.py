@@ -1,5 +1,3 @@
-# Copyright (C) 2021 Veez Music-Project
-
 from os import path
 import converter
 from callsmusic import callsmusic, queues
@@ -16,14 +14,13 @@ from helpers.filters import command, other_filters
 from helpers.gets import get_file_name
 from pyrogram import Client
 from pytgcalls.types.input_stream import InputAudioStream
-from pytgcalls.types.input_stream import InputStream
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
 @Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
 async def stream(_, message: Message):
     costumer = message.from_user.mention
-    lel = await message.reply_text("**『 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂 』**")
+    lel = await message.reply_text("🔁 **𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂**")
 
     keyboard = InlineKeyboardMarkup(
         [
@@ -54,30 +51,22 @@ async def stream(_, message: Message):
         if not path.isfile(path.join("downloads", file_name))
         else file_name
     )
-    chat_id = message.chat.id
     ACTV_CALLS = []
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))    
-    if chat_id in ACTV_CALLS:
-        position = await queues.put(chat_id, file=file_path)
+    if message.chat.id in ACTV_CALLS:
+        position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
             photo=f"{QUE_IMG}",
-            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **Name:** {title[:50]}\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {costumer}",
+            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴:** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {costumer}",
             reply_markup=keyboard,
         )
     else:
-        await callsmusic.pytgcalls.join_group_call(
-            chat_id, 
-            InputStream(
-                InputAudioStream(
-                    file_path,
-                ),
-            ),
-        )
+        await callsmusic.pytgcalls.join_group_call(message.chat.id, InputAudioStream(file_path)) 
         await message.reply_photo(
             photo=f"{ALIVE_IMG}",
-            caption=f"➪ **𝙽𝙰𝙼𝙴:** {title[:50]}\n➪ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n➪ **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"➪**𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {costumer}",
+            caption=f"🏷 **𝙽𝙰𝙼𝙴:** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {costumer}",
             reply_markup=keyboard,
         )
 
