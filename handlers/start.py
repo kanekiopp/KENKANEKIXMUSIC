@@ -75,46 +75,12 @@ async def start_(client: Client, message: Message):
                     ),
                     InlineKeyboardButton(
                         "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "『 𝙰𝙻𝙴𝚇𝙰 𝚁𝙾𝙱𝙾𝚃 』", url="https://t.me/ALEXA_MANAGER_ROBOT"
                     )
                 ],
             ]
         ),
         disable_web_page_preview=True,
     )
-
-
-@Client.on_message(
-    command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited
-)
-async def start(client: Client, message: Message):
-    current_time = datetime.utcnow()
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
-
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
-                ),
-            ]
-        ]
-    )
-
-    alive = f"**𝙷𝙴𝙻𝙻𝙾 {message.from_user.mention()}, 𝙸'𝙼 {BOT_NAME}**\n\n✪ 𝙼𝚈 𝙼𝙰𝚂𝚃𝙴𝚁: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✪ 𝙱𝙾𝚃 𝚅𝙴𝚁𝚂𝙸𝙾𝙽: `v{__version__}`\n✪ 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➮ `{pyrover}`\n✪ 𝙿𝚈𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➮ `{__python_version__}`\n✪ 𝚄𝙿𝚃𝙸𝙼𝙴 𝚂𝚃𝙰𝚃𝚄𝚂 ➮ `{uptime}`\n\n**𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝙰𝙳𝙳𝙸𝙽𝙶 𝙼𝙴 𝙷𝙴𝚁𝙴, 𝙹𝙾𝙸𝙽 𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃** ❤"
-
-    await message.reply_photo(
-        photo=f"{ALIVE_IMG}",
-        caption=alive,
-        reply_markup=keyboard,
-    )
-
 
 @Client.on_message(
     command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited
