@@ -37,11 +37,6 @@ async def cbstart(_, query: CallbackQuery):
                     ),
                     InlineKeyboardButton(
                         "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "『 𝙰𝙻𝙴𝚇𝙰 𝚁𝙾𝙱𝙾𝚃 』", url="https://t.me/ALEXA_MANAGER_ROBOT"
                     )
                 ],
             ]
@@ -86,6 +81,7 @@ async def cbbasic(_, query: CallbackQuery):
 /search (video name) - search video from youtube detailed
 /vsong (video name) - download video from youtube detailed
 /lyric - (song name) lyrics scrapper
+
 『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚅𝙲 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』
 /cplay - stream music on channel voice chat
 /cplayer - show the song in streaming
