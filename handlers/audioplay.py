@@ -17,57 +17,59 @@ from pytgcalls.types.input_stream import InputAudioStream
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
+
 @Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
 async def stream(_, message: Message):
+
+    lel = await message.reply("🔁 **processing** sound...")
     costumer = message.from_user.mention
-    lel = await message.reply_text("**𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂🔥**")
 
     keyboard = InlineKeyboardMarkup(
-        [
             [
-                InlineKeyboardButton(
-                    text="• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"
-                ),
-                InlineKeyboardButton(
-                    text="✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
-                ),
+                [
+                    InlineKeyboardButton(
+                        text="〘 ♕ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ♕ 〙",
+                        url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton(
+                        text="✘‿✘",
+                        url=f"https://t.me/{UPDATES_CHANNEL}")
+                ]
             ]
-        ]
-    )
+        )
 
     audio = message.reply_to_message.audio if message.reply_to_message else None
-    if not audio:
-        return await lel.edit("💭 **please reply to a telegram audio file**")
-    if round(audio.duration / 60) > DURATION_LIMIT:
-        return await lel.edit(
-            f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
-        )
+    url = get_url(message)
 
-    title = audio.title
-    file_name = get_file_name(audio)
-    duration = convert_seconds(audio.duration)
-    file_path = await converter.convert(
-        (await message.reply_to_message.download(file_name))
-        if not path.isfile(path.join("downloads", file_name))
-        else file_name
-    )
-    ACTV_CALLS = []
-    for x in callsmusic.pytgcalls.active_calls:
-        ACTV_CALLS.append(int(x.chat_id))    
-    if message.chat.id in ACTV_CALLS:
+    if audio:
+        if round(audio.duration / 60) > DURATION_LIMIT:
+            return await lel.edit(f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**")
+
+        file_name = get_file_name(audio)
+        title = audio.title
+        duration = convert_seconds(audio.duration)
+        file_path = await converter.convert(
+            (await message.reply_to_message.download(file_name))
+            if not path.isfile(path.join("downloads", file_name)) else file_name
+        )
+    elif url:
+        return await lel.edit("❗ **reply to a telegram audio file.**")
+    else:
+        return await lel.edit("❗ **reply to a telegram audio file.**")
+
+    if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
-            photo=f"{QUE_IMG}",
-            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴:** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {costumer}",
+            photo="https://telegra.ph/file/36343b9d4742efe0b09cd.jpg",
+            caption=f"🏷 **𝙽𝙰𝙼𝙴 ✘** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {costumer}\n\n🌸 𝚃𝚁𝙰𝙲𝙺 𝙿𝙾𝚂𝙸𝚃𝙸𝙾𝙽 ✘** `{position}`",
             reply_markup=keyboard,
         )
+        return await lel.delete()
     else:
-        await callsmusic.pytgcalls.join_group_call(message.chat.id, InputAudioStream(file_path)) 
+        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-            photo=f"{ALIVE_IMG}",
-            caption=f"🏷 **𝙽𝙰𝙼𝙴:** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽:** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈:** {costumer}",
+            photo="https://telegra.ph/file/224178328de996a82507f.jpg",
+            caption=f"🏷 **𝙽𝙰𝙼𝙴 ✘** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂:** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n" \
+                   +f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {costumer}",
             reply_markup=keyboard,
         )
-
-    return await lel.delete() 
+        return await lel.delete()
