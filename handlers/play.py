@@ -122,7 +122,7 @@ async def playlist(client, message):
             [
                 InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -264,7 +264,7 @@ async def p_cb(b, cb):
             [
                 InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
             [InlineKeyboardButton("• Bᴀᴄᴋ", callback_data="menu")],
@@ -312,7 +312,7 @@ async def m_cb(b, cb):
             [
                 InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
             [InlineKeyboardButton("• Bᴀᴄᴋ", callback_data="menu")],
@@ -605,7 +605,7 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
                 InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
             ],
-            [InlineKeyboardButton("✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
