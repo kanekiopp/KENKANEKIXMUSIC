@@ -120,9 +120,9 @@ async def playlist(client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("〘 ♕ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ♕ 〙", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "〘 ♕ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻  ♕ 〙", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -183,9 +183,9 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("• Pʟᴀʏʟɪsᴛ", "playlist"),
+                InlineKeyboardButton("〘 ♕ 𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃 ♕ 〙", "playlist"),
             ],
-            [InlineKeyboardButton("• Cʟᴏsᴇ", "cls")],
+            [InlineKeyboardButton("〘 ♕ 𝙲𝙻𝙾𝚂𝙴 ♕ 〙", "cls")],
         ]
     )
     return mar
@@ -262,9 +262,9 @@ async def p_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("〘 ♕ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ♕ 〙", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "〘 ♕ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♕ 〙", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
             [InlineKeyboardButton("• Bᴀᴄᴋ", callback_data="menu")],
@@ -310,12 +310,12 @@ async def m_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("〘 ♕ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ♕ 〙", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "〘 ♕ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♕ 〙", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-            [InlineKeyboardButton("• Bᴀᴄᴋ", callback_data="menu")],
+            [InlineKeyboardButton("〘 ♕ 𝙱𝙰𝙲𝙺 ♕ 〙", callback_data="menu")],
         ]
     )
 
@@ -428,9 +428,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("• Pʟᴀʏʟɪsᴛ", "playlist"),
+                    InlineKeyboardButton("〘 ♕ 𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃 ♕ 〙", "playlist"),
                 ],
-                [InlineKeyboardButton("• Cʟᴏsᴇ", "cls")],
+                [InlineKeyboardButton("〘 ♕ 𝙲𝙻𝙾𝚂𝙴 ♕ 〙", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -484,7 +484,7 @@ async def m_cb(b, cb):
             await cb.message.edit(
                 hps,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="close")]]
+                    [[InlineKeyboardButton("〘 ♕ 𝙲𝙻𝙾𝚂𝙴 ♕ 〙", callback_data="close")]]
                 ),
             )
         else:
@@ -498,7 +498,7 @@ async def ytplay(_, message: Message):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Cᴏᴍᴍᴀɴᴅ Sʏɴᴛᴀx", callback_data="cmdsyntax")
+                InlineKeyboardButton("〘 ♕ 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚂𝚈𝙽𝚃𝙰𝚇♕ 〙", callback_data="cmdsyntax")
             ],[
                 InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="close")
             ]
@@ -602,10 +602,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
-                InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton("〘 ♕ 𝙼𝙴𝙽𝚄 ♕ 〙", callback_data="menu"),
+                InlineKeyboardButton("〘 ♕ 𝙲𝙻𝙾𝚂𝙴 ♕ 〙", callback_data="cls"),
             ],
-            [InlineKeyboardButton("✘‿✘", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("〘 ♕ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♕ 〙", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
