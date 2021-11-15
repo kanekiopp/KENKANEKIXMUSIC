@@ -120,9 +120,9 @@ async def playlist(client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -183,9 +183,9 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("『 𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃 』", "playlist"),
+                InlineKeyboardButton("• Pʟᴀʏʟɪsᴛ", "playlist"),
             ],
-            [InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", "cls")],
+            [InlineKeyboardButton("• Cʟᴏsᴇ", "cls")],
         ]
     )
     return mar
@@ -262,12 +262,12 @@ async def p_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-            [InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="menu")],
+            [InlineKeyboardButton("• Bᴀᴄᴋ", callback_data="menu")],
         ]
     )
 
@@ -310,12 +310,12 @@ async def m_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-            [InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="menu")],
+            [InlineKeyboardButton("• Bᴀᴄᴋ", callback_data="menu")],
         ]
     )
 
@@ -428,9 +428,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("『 𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃 』", "playlist"),
+                    InlineKeyboardButton("• Pʟᴀʏʟɪsᴛ", "playlist"),
                 ],
-                [InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", "cls")],
+                [InlineKeyboardButton("• Cʟᴏsᴇ", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -456,7 +456,7 @@ async def m_cb(b, cb):
                 await cb.message.edit(
                     nmq,
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="close")]]
+                        [[InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="close")]]
                     ),
                 )
             else:
@@ -484,7 +484,7 @@ async def m_cb(b, cb):
             await cb.message.edit(
                 hps,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="close")]]
+                    [[InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="close")]]
                 ),
             )
         else:
@@ -498,9 +498,9 @@ async def ytplay(_, message: Message):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("『 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚂𝚈𝙽𝙰𝚃𝚇』", callback_data="cmdsyntax")
+                InlineKeyboardButton("• Cᴏᴍᴍᴀɴᴅ Sʏɴᴛᴀx", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="close")
+                InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="close")
             ]
         ]
     )
@@ -602,10 +602,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("『 𝙼𝙴𝙽𝚄 』", callback_data="menu"),
-                InlineKeyboardButton("『 𝙲𝙻𝙾𝚂𝙴 』", callback_data="cls"),
+                InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
             ],
-            [InlineKeyboardButton("『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("✖‿✖", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
