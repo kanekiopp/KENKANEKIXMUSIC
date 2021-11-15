@@ -58,10 +58,10 @@ async def alive(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "〘 ♕ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ♕ 〙", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "〘 ♕ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♕ 〙", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
