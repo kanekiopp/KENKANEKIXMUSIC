@@ -45,15 +45,15 @@ async def alive(client: Client, message: Message):
         photo=f"{ALIVE_IMG}",
         caption=f"""**➮𝙷𝙸𝙸 𝙸 𝙼 [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
 
-➮ **𝙰𝙻𝙴𝚇𝙰 𝚂𝚈𝚂𝚃𝙴𝙼 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙵𝙸𝙽𝙴**
+✘ **𝙰𝙻𝙴𝚇𝙰 𝚂𝚈𝚂𝚃𝙴𝙼 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙵𝙸𝙽𝙴 𖣘**
 
-➮ **𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 ᴠᴇʀꜱɪᴏɴ : 0.7.0 𝙻𝙴𝚃𝙴𝚂𝚃**
+✘ **𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 ᴠᴇʀꜱɪᴏɴ 𖣘 0.7.0 𝙻𝙴𝚃𝙴𝚂𝚃**
 
-➮ **𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 : [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
+✘ **𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 𖣘 [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
 
-➮ **𝚂𝙴𝚁𝚅𝙸𝙲𝙴 𝚄𝙿𝚃𝙸𝙼𝙴 : `{uptime}`**
+✘ **𝚂𝙴𝚁𝚅𝙸𝙲𝙴 𝚄𝙿𝚃𝙸𝙼𝙴 𖣘 `{uptime}`**
 
-**𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝙰𝙻𝙴𝚇𝙰 𝚁𝙾𝙱𝙾𝚃 💖**""",
+**✘ 𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝙰𝙻𝙴𝚇𝙰 𝚁𝙾𝙱𝙾𝚃 💖**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
