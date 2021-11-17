@@ -1,5 +1,3 @@
-# Copyright (C) 2021 VeezMusicProject
-
 from asyncio import QueueEmpty
 
 from callsmusic import callsmusic
