@@ -102,5 +102,5 @@ python3 main.py # run the bot.
 
 ## 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 
                           
-<a href="https://t.me/darkamansupport"><img src="https://img.shields.io/badge/Join-SUPPORT%20GROUP-red.svg?logo=Telegram"></a> <a href="https://t.me/darkamanchannel"><img src="https://img.shields.io/badge/Join-SUPPORT%20CHANNEL-red.svg?logo=Telegram"></a>
+<a href="https://t.me/darkamansupport"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃%20-gold.svg?logo=Telegram"></a> <a href="https://t.me/darkamanchannel"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻%20-gold.svg?logo=Telegram"></a>
 
