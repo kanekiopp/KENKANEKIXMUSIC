@@ -98,9 +98,7 @@ cp example.env .env # use vim to edit ENVs
 vim .env # fill up the ENVs (Steps: press i to enter in insert mode then edit the file. Press Esc to exit the editing mode then type :wq! and press Enter key to save the file).
 python3 main.py # run the bot.
 
-## 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 
-
-## 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 
+## 𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙰𝙽𝙳 𝙲𝙷𝙰𝙽𝙽𝙴𝙻
                           
-<a href="https://t.me/darkamansupport"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃%20-golden.svg?logo=Telegram"></a> <a href="https://t.me/darkamanchannel"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻%20-gold.svg?logo=Telegram"></a>
+<a href="https://t.me/darkamansupport"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺𝙰𝙼𝙰𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃%20-golden.svg?logo=Telegram"></a> <a href="https://t.me/darkamanchannel"><img src="https://img.shields.io/badge/𝙳𝙰𝚁𝙺 𝙰𝙼𝙰𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻%20-blue.svg?logo=Telegram"></a>
 
