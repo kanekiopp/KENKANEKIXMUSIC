@@ -1,15 +1,14 @@
 from os import path
 import aiohttp
 from io import BytesIO
-from traceback import format_exc
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from helpers.filters import command
-from config import arq
+from database_url.import db
 
 
 async def quotify(messages: list):
-    response = await arq.quotly(messages)
+    response = await db.quotly(messages)
     if not response.ok:
         return [False, response.result]
     sticker = response.result
