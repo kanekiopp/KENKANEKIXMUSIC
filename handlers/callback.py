@@ -259,7 +259,7 @@ async def cbhelps(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton("『 𝙰𝙳𝙼𝙸𝙽 』", callback_data="cblamp"),
-                    InlineKeyboardButton("𝚂𝚄𝙳𝙾", callback_data="cblab"),
+                    InlineKeyboardButton("『 𝚂𝚄𝙳𝙾 』", callback_data="cblab"),
                 ],
                 [InlineKeyboardButton("『 𝙾𝚆𝙽𝙴𝚁 𝙲𝙼𝙳 』", callback_data="cbmoon")],
                 [InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbstart")],
