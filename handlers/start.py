@@ -52,10 +52,9 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_photo("https://te.legra.ph/file/3537b6200baef4fa4fb3c.jpg")
     await message.reply_text(
-        f"""✨ **Wᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
-🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ @DARKAMAN !**""",
+        f"""✨ **[Wᴇʟᴄᴏᴍᴇ](https://te.legra.ph/file/a045aefa994cd73320fa0.jpg) {message.from_user.mention()} !**\n
+🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ [AɱαɳッGυʝʝαɾ](https://t.me/DARKAMAN) !**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -89,7 +88,7 @@ async def help(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **ʜᴇʟʟᴏ** {message.from_user.mention()} !
 » **press the button below to read the explanation and see the list of available commands !**
-⚡ __Powered by {BOT_NAME} A.I__""",
+⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="『 𝙱𝙰𝚂𝙸𝙲 𝙶𝚄𝙸𝙳𝙴 』", callback_data="cbguide")]]
         ),
