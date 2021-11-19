@@ -18,8 +18,8 @@ from pytgcalls.types.input_stream import InputStream
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
-async def play(_, message: Message):
+@Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
+async def stream(_, message: Message):
     costumer = message.from_user.mention
     lel = await message.reply_text("**𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂 🔥**")
 
