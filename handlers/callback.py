@@ -19,8 +19,8 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **𝚆𝙴𝙻𝙲𝙾𝙼𝙴 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-🌸 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ @DARKAMAN !**""",
+        f"""✨ **[𝚆𝙴𝙻𝙲𝙾𝙼𝙴](https://te.legra.ph/file/a045aefa994cd73320fa0.jpg) [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
+🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ @DARKAMAN !**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -105,6 +105,7 @@ async def cbbasic(_, query: CallbackQuery):
 async def cbadvanced(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝚅𝙰𝙽𝙲𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /start (in group) - see the bot alive status
 /reload - reload bot and refresh the admin list
 /ping - check the bot ping status
@@ -121,6 +122,7 @@ async def cbadvanced(_, query: CallbackQuery):
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /player - show the music playing status
 /pause - pause the music streaming
 /resume - resume the music was paused
@@ -144,6 +146,7 @@ async def cbadmin(_, query: CallbackQuery):
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝚂𝚄𝙳𝙾 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /leaveall - order the assistant to leave from all group
 /stats - show the bot statistic
 /rmd - remove all downloaded files
@@ -160,6 +163,7 @@ async def cbsudo(_, query: CallbackQuery):
 async def cbowner(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙾𝚆𝙽𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /stats - show the bot statistic
 /broadcast (reply to message) - send a broadcast message from bot
 /block (user id - duration - reason) - block user for using your bot
@@ -177,6 +181,7 @@ async def cbowner(_, query: CallbackQuery):
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 』:**
+
 1.) **first, add me to your group.**
 2.) **then promote me as admin and give all permissions except anonymous admin.**
 3.) **add @{ASSISTANT_NAME} to your group or type /join to invite her.**
@@ -256,8 +261,8 @@ async def cbhelps(_, query: CallbackQuery):
                     InlineKeyboardButton("『 𝙰𝙳𝙼𝙸𝙽 』", callback_data="cblamp"),
                     InlineKeyboardButton("𝚂𝚄𝙳𝙾", callback_data="cblab"),
                 ],
-                [InlineKeyboardButton("𝙾𝚆𝙽𝙴𝚁 𝙲𝙼𝙳", callback_data="cbmoon")],
-                [InlineKeyboardButton("𝙱𝙰𝙲𝙺", callback_data="cbstart")],
+                [InlineKeyboardButton("『 𝙾𝚆𝙽𝙴𝚁 𝙲𝙼𝙳 』", callback_data="cbmoon")],
+                [InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbstart")],
             ]
         ),
     )
@@ -282,7 +287,9 @@ async def cbguides(_, query: CallbackQuery):
 async def cblocal(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙱𝙰𝚂𝙸𝙲 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 『 𝙶𝚁𝙾𝚄𝙿 𝚅𝙲 𝙲𝙼𝙳 』
+
 /play (song name) - play song from youtube
 /ytp (song name) - play song directly from youtube 
 /stream (reply to audio) - play song using audio file
@@ -291,7 +298,9 @@ async def cblocal(_, query: CallbackQuery):
 /search (video name) - search video from youtube detailed
 /vsong (video name) - download video from youtube detailed
 /lyric - (song name) lyrics scrapper
+
 『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚅𝙲 𝙲𝙼𝙳 』
+
 /cplay - stream music on channel voice chat
 /cplayer - show the song in streaming
 /cpause - pause the streaming music
@@ -311,6 +320,7 @@ async def cblocal(_, query: CallbackQuery):
 async def cbadven(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝚅𝙰𝙽𝙲𝙴𝙳 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /start (in group) - see the bot alive status
 /reload - reload bot and refresh the admin list
 /ping - check the bot ping status
@@ -326,7 +336,8 @@ async def cbadven(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cblamp"))
 async def cblamp(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+    f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /player - show the music playing status
 /pause - pause the music streaming
 /resume - resume the music was paused
@@ -350,6 +361,7 @@ async def cblamp(_, query: CallbackQuery):
 async def cblab(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝚂𝚄𝙳𝙾 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /leaveall - order the assistant to leave from all group
 /stats - show the bot statistic
 /rmd - remove all downloaded files
@@ -366,6 +378,7 @@ async def cblab(_, query: CallbackQuery):
 async def cbmoon(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙾𝚆𝙽𝙴𝚁 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
+
 /stats - show the bot statistic
 /broadcast - send a broadcast message from bot
 /block (user id - duration - reason) - block user for using your bot
