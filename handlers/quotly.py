@@ -88,5 +88,3 @@ async def quotly_func(client, message: Message):
             + " This error usually happens when there's a "
             + " message containing something other than text."
         )
-        e = format_exc()
-        print(e)
