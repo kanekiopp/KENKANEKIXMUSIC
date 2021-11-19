@@ -54,7 +54,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Wᴇʟᴄᴏᴍᴇ {message.from_user.mention()} !**\n
-🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) [Cᴀɴ](https://te.legra.ph/file/a045aefa994cd73320fa0.jpg) Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖.**""",
+🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) [Cᴀɴ](https://te.legra.ph/file/a045aefa994cd73320fa0.jpg), Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
