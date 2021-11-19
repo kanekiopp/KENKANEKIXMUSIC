@@ -4,7 +4,7 @@ from io import BytesIO
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from helpers.filters import command
-from database_url.import db
+from helpers.database import db
 
 
 async def quotify(messages: list):
