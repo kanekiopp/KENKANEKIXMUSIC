@@ -4,11 +4,11 @@ from io import BytesIO
 from pyrogram.types import Message
 from pyrogram import Client, filters
 from helpers.filters import command
-from config import arq
+from config import db
 
 
 async def quotify(messages: list):
-    response = await arq.quotly(messages)
+    response = await db.quotly(messages)
     if not response.ok:
         return [False, response.result]
     sticker = response.result
