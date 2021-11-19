@@ -46,4 +46,3 @@ UPSTREAM_REPO = os.environ.get(
     "UPSTREAM_REPO", "https://github.com/levina-lab/VeezMusic"
 )
 HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
-arq = ARQ("https://thearq.tech", ARQ_API_KEY, 
