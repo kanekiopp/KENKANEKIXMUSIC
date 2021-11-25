@@ -42,8 +42,7 @@ async def cbstart(_, query: CallbackQuery):
                         "𝐀𝐃𝐃 𝐌𝐄.. 𝐆𝐑𝐎𝐔𝐏", url="https://t.me/{BOT_USERNAME}?startgroup=true"
                     )
                 ],
-            ]
-        ),        
+           ),        
         disable_web_page_preview=True,
     )
 
