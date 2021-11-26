@@ -58,8 +58,9 @@ async def start_(client: Client, message: Message):
 🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓💖.**""",
         reply_markup=InlineKeyboardMarkup(
            [
-                ],
+                [
                 [InlineKeyboardButton("𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄", callback_data="cbhowtouse")],
+                ],
                 [
                     InlineKeyboardButton("𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒", callback_data="cbcmds"),
                     InlineKeyboardButton("𝐂𝐑𝐄𝐀𝐓𝐄𝐑", url=f"https://t.me/{OWNER_NAME}"),
