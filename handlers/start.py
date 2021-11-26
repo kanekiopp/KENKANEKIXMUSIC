@@ -59,7 +59,7 @@ async def start_(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
            [
                 [
-                [InlineKeyboardButton("𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄", callback_data="cbhowtouse"),
                 ],
                 [
                     InlineKeyboardButton("𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒", callback_data="cbcmds"),
