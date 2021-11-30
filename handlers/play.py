@@ -20,6 +20,7 @@ from config import (
     GROUP_SUPPORT,
     THUMB_IMG,
     CMD_IMG,
+    QUE_IMG,
     UPDATES_CHANNEL,
     que,
 )
