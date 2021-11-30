@@ -19,8 +19,8 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **𝐖𝐄𝐋𝐂𝐎𝐌𝐄 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-🌸 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖.**""",
+        f"""✨ **𝚆𝙴𝙻𝙲𝙾𝙼𝙴 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
+🌸 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Oᴘ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ💖. Dᴇᴠᴇʟᴏᴩᴇᴅ Bʏ @DARKAMAN !**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -64,11 +64,8 @@ async def cbhelp(_, query: CallbackQuery):
                     InlineKeyboardButton("『 𝙰𝙳𝙼𝙸𝙽 』", callback_data="cbadmin"),
                     InlineKeyboardButton("『 𝚂𝚄𝙳𝙾 』", callback_data="cbsudo"),
                 ],
-                [
-                    InlineKeyboardButton("『 𝙾𝚆𝙽𝙴𝚁 』", callback_data="cbowner"),
-                    InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbguide"),
-                ],
-                [InlineKeyboardButton("『 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴 』", callback_data="cbhowtouse")],      
+                [InlineKeyboardButton("『 𝙾𝚆𝙽𝙴𝚁 』", callback_data="cbowner")],
+                [InlineKeyboardButton("『 𝙱𝙰𝙲𝙺 』", callback_data="cbguide")],      
             ]
         ),
     )
@@ -259,11 +256,8 @@ async def cbhelps(_, query: CallbackQuery):
                     InlineKeyboardButton("『 𝙰𝙳𝙼𝙸𝙽 』", callback_data="cblamp"),
                     InlineKeyboardButton("𝚂𝚄𝙳𝙾", callback_data="cblab"),
                 ],
-                [
-                    InlineKeyboardButton("𝙾𝚆𝙽𝙴𝚁 𝙲𝙼𝙳", callback_data="cbmoon")],
-                    InlineKeyboardButton("𝙱𝙰𝙲𝙺", callback_data="cbstart")],
-                ],
-                [InlineKeyboardButton("『 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴 』", callback_data="cbhowtouse")],      
+                [InlineKeyboardButton("𝙾𝚆𝙽𝙴𝚁 𝙲𝙼𝙳", callback_data="cbmoon")],
+                [InlineKeyboardButton("𝙱𝙰𝙲𝙺", callback_data="cbstart")],
             ]
         ),
     )
