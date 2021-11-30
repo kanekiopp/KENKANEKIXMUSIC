@@ -5,6 +5,7 @@ from config import (
     AUD_IMG,
     BOT_USERNAME,
     DURATION_LIMIT,
+    QUE_IMG,
     GROUP_SUPPORT,
     QUE_IMG,
     UPDATES_CHANNEL,
