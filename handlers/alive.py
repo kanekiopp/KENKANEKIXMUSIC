@@ -43,25 +43,26 @@ async def alive(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
-        caption=f"""**➮𝙷𝙸𝙸 𝙸 𝙼 [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
+        caption=f"""**༎⃝💜 𝐇𝐈 𝐈,𝐌  [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
 
-✘ **𝙰𝙻𝙴𝚇𝙰 𝚂𝚈𝚂𝚃𝙴𝙼 𝚆𝙾𝚁𝙺𝙸𝙽𝙶 𝙵𝙸𝙽𝙴**
+ **༎⃝💔𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂 𝐖𝐎𝐑𝐊𝐈𝐍𝐆 𝐅𝐈𝐍𝐄
+**
 
-✘ **𝙰𝙻𝙴𝚇𝙰 𝙼𝚄𝚂𝙸𝙲 ᴠᴇʀꜱɪᴏɴ 𖣘 0.7.0 𝙻𝙴𝚃𝙴𝚂𝚃**
+ **༎⃝🥀𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂 𝐕𝐄𝐑𝐒𝐈𝐎𝐍༎⃝➤ 𝟶.𝟽.𝟶 𝐋𝐄𝐓𝐄𝐒𝐓**
 
-✘ **𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 𖣘 [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
+ **༎⃝🔥𝐎𝐖𝐍𝐄𝐑༎⃝➤ [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
 
-✘ **𝚂𝙴𝚁𝚅𝙸𝙲𝙴 𝚄𝙿𝚃𝙸𝙼𝙴 𖣘 `{uptime}`**
+ **༎⃝🌸𝐔𝐏𝐓𝐈𝐌𝐄༎⃝➤ `{uptime}`**
 
-**✘ 𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 𝙰𝙻𝙴𝚇𝙰 𝚁𝙾𝙱𝙾𝚃 💖**""",
+**༎⃝🔥𝐓𝐇𝐍𝐗 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐃𝐀𝐑𝐊 𝐌𝐔𝐒𝐈𝐂༎⃝➤**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "〘 ♕ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ♕ 〙", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "〘 ♕ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♕ 〙", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
