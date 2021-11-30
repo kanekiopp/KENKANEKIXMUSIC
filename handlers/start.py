@@ -56,31 +56,34 @@ async def start_(client: Client, message: Message):
         photo=f"https://te.legra.ph/file/951a4a857c9c81ff65b0b.jpg",
         caption=f"""✨ **𝐖𝐄𝐋𝐂𝐎𝐌𝐄 {message.from_user.mention()} !**\n
 🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓💖.**""",
-        reply_markup=InlineKeyboardMarkup(
-           [
-                [
-                [InlineKeyboardButton("𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄", callback_data="cbhowtouse"),
-                ],
-                [
-                    InlineKeyboardButton("𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒", callback_data="cbcmds"),
-                    InlineKeyboardButton("𝐂𝐑𝐄𝐀𝐓𝐄𝐑", url=f"https://t.me/{OWNER_NAME}"),
-                ],
+       .reply_markup=InlineKeyboardMarkup(
+            [
                 [
                     InlineKeyboardButton(
-                        "𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "𝐂𝐇𝐀𝐍𝐍𝐄𝐋", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "𝐀𝐃𝐃 𝐌𝐄.. 𝐆𝐑𝐎𝐔𝐏", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+                        "➕ Add me to your Group ➕",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-            ),
+                [
+                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
+                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
+                    InlineKeyboardButton(
+                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🌐 Source Code", callback_data="cbhowtouse"),"
+                    )
+                ],
+            ]
+        ),
         disable_web_page_preview=True,
-    )
 
 @Client.on_message(
     command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited
