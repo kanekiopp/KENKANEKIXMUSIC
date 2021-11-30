@@ -42,7 +42,7 @@ async def cbstart(_, query: CallbackQuery):
                     ),
                 ],
                 [
-                    InlineKeyboardButton("༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse"),
+                    InlineKeyboardButton("༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse"
                     )
                 ],
             ]
