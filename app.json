@@ -29,9 +29,9 @@
             "value": ""
         },
         "DATABASE_URL": {
-            "description": "fill with the mongodb url you get from cloud.mongodb.com",
+            "description": "mongodb url leave if u don't have",
             "required": true,
-            "value": ""
+            "value": "mongodb+srv://DARKAMAN:DARKAMAN@cluster0.snqhn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
         },
         "LOG_CHANNEL": {
             "description": "create a private channel and get the channel id (give the channel username/link to bot @username_to_id_bot and get the channel id), add your bot as admin to the channel too",
@@ -56,12 +56,17 @@
         "OWNER_NAME": {
             "description": "fill with your telegram username without @",
             "required": false,
-            "value": "dlwrml"
+            "value": "DARKAMAN" 
         },
         "ALIVE_NAME": {
             "description": "fill with the nickname of your telegram account",
             "required": false,
-            "value": "Levina"
+            "value": "DARKAMAN"
+        },
+        "ALIVE_IMG": {
+            "description": "fill with your custom background image link",
+            "required": false,
+            "value": "https://te.legra.ph/file/c7c0a16a6a545f2e93c0c.jpg"
         },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
@@ -83,12 +88,12 @@
         "UPDATES_CHANNEL": {
             "description": "if you have channel, fill the channel username here without @",
             "required": false,
-            "value": "levinachannel"
+            "value": "DARKAMANCHANNEL"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group, fill the group username here without @",
             "required": false,
-            "value": "VeezSupportGroup"
+            "value": "DARKAMANSUPPORT"
         }
     },
     "addons": [],
