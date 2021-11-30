@@ -77,8 +77,7 @@ async def start_(client: Client, message: Message):
                     ),
                 ],
                 [
-                    InlineKeyboardButton(
-                        "༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse"),"
+                    InlineKeyboardButton("༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse")],
                     )
                 ],
             ]
@@ -94,7 +93,7 @@ async def help(client: Client, message: Message):
 » **press the button below to read the explanation and see the list of available commands !**
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="༎⃝💜𝐁𝐀𝐒𝐈𝐂 𝐆𝐔𝐈𝐃𝐄༎⃝➤", callback_data="cbguide")]]
+            [[InlineKeyboardButton(text="༎⃝💜𝐁𝐀𝐒𝐈𝐂༎⃝➤", callback_data="cbguide")]]
         ),
     )
 
