@@ -87,7 +87,7 @@ async def start_(client: Client, message: Message):
 )
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **ʜᴇʟʟᴏ** {message.from_user.mention()} !
+        f"""✨ **𝐇𝐄𝐋𝐋𝐎** {message.from_user.mention()} !
 » **press the button below to read the explanation and see the list of available commands !**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
