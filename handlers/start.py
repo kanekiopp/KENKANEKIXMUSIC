@@ -52,29 +52,31 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_photo("https://te.legra.ph/file/3537b6200baef4fa4fb3c.jpg")
-    await message.reply_text(
-        f"""✨ **𝐖𝐄𝐋𝐂𝐎𝐌𝐄 {message.from_user.mention()} !**\n
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
+    await message.reply_photo(
+        photo=f"{ALIVE_IMG}",
+        caption=f"""**༎⃝✨𝐖𝐄𝐋𝐂𝐎𝐌𝐄༎⃝➤ {message.from_user.mention()} !**\n
 🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "『 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 』",
+                        "༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("『 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴 』", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("『 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』", callback_data="cbcmds"),
-                    InlineKeyboardButton("『 𝙲𝚁𝙴𝙰𝚃𝙴𝚁 』", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("༎⃝🌸𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒༎⃝➤", callback_data="cbcmds"),
+                    InlineKeyboardButton("༎⃝💔𝐂𝐑𝐄𝐀𝐓𝐄𝐑༎⃝➤", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "『 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 』", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "『 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 』", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
@@ -87,11 +89,11 @@ async def start_(client: Client, message: Message):
 )
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **𝐇𝐄𝐋𝐋𝐎** {message.from_user.mention()} !
+        f"""**༎⃝✨𝐇𝐄𝐋𝐋𝐎༎⃝➤** {message.from_user.mention()} !
 » **press the button below to read the explanation and see the list of available commands !**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="『 𝙱𝙰𝚂𝙸𝙲 𝙶𝚄𝙸𝙳𝙴 』", callback_data="cbguide")]]
+            [[InlineKeyboardButton(text="༎⃝💜𝐁𝐀𝐒𝐈𝐂 𝐆𝐔𝐈𝐃𝐄༎⃝➤", callback_data="cbguide")]]
         ),
     )
 
