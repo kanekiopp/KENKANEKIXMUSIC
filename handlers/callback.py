@@ -106,7 +106,7 @@ async def cbbasic(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbadvanced"))
 async def cbadvanced(_, query: CallbackQuery):
-    await query.edit_message_text
+    await query.edit_message_text(
         f"""**『 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙰𝙳𝚅𝙰𝙽𝙲𝙴𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 』**
 
 /start (in group) - see the bot alive status
