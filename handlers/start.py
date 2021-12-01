@@ -52,7 +52,8 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_text("https://te.legra.ph/file/c7c0a16a6a545f2e93c0c.jpg")
+    await message.reply_photo("https://te.legra.ph/file/3537b6200baef4fa4fb3c.jpg")
+    await message.reply_text(
         f"""✨ **𝐖𝐄𝐋𝐂𝐎𝐌𝐄 {message.from_user.mention()} !**\n
 🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖.**""",
         reply_markup=InlineKeyboardMarkup(
