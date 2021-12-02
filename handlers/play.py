@@ -44,7 +44,7 @@ from youtube_search import YoutubeSearch
 chat_id = None
 DISABLED_GROUPS = []
 useer = "NaN"
-ACTV_CALLS = []
+
 
 
 def cb_admin_check(func: Callable) -> Callable:
@@ -122,7 +122,7 @@ async def playlist(client, message):
             [
                 InlineKeyboardButton("༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤.", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -324,24 +324,25 @@ async def m_cb(b, cb):
         cb.message.chat.title.startswith("Channel Music: ")
         and chat.title[14:].isnumeric()
     ):
-        chat_id = int(chat.title[13:])
+        chet_id = int(chat.title[13:])
     else:
-        chat_id = cb.message.chat.id
-    qeue = que.get(chat_id)
+        chet_id = cb.message.chat.id
+    qeue = que.get(chet_id)
     type_ = cb.matches[0].group(1)
     cb.message.chat.id
     m_chat = cb.message.chat
 
     cb.message.reply_markup.inline_keyboard[1][0].callback_data
     if type_ == "pause":
+        ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) not in ACTV_CALLS:
+            ACTV_CALLS.append(int(x.chet_id))
+        if int(chet_id) not in ACTV_CALLS:
             await cb.answer(
                 "userbot is not connected to voice chat.", show_alert=True
             )
         else:
-            await callsmusic.pytgcalls.pause_stream(chat_id)
+            await callsmusic.pytgcalls.pause_stream(chet_id)
             
             await cb.answer("music paused")
             await cb.message.edit(
@@ -349,14 +350,15 @@ async def m_cb(b, cb):
             )
 
     elif type_ == "play":
+        ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) not in ACTV_CALLS:
+            ACTV_CALLS.append(int(x.chet_id))
+        if int(chet_id) not in ACTV_CALLS:
             await cb.answer(
                 "userbot is not connected to voice chat.", show_alert=True
             )
         else:
-            await callsmusic.pytgcalls.resume_stream(chat_id)
+            await callsmusic.pytgcalls.resume_stream(chet_id)
             
             await cb.answer("music resumed")
             await cb.message.edit(
@@ -388,26 +390,28 @@ async def m_cb(b, cb):
 
     elif type_ == "resume":
         psn = "▶ music playback has resumed"
+        ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) not in ACTV_CALLS:
+            ACTV_CALLS.append(int(x.chet_id))
+        if int(chet_id) not in ACTV_CALLS:
             await cb.answer(
                 "voice chat is not connected or already playing", show_alert=True
             )
         else:
-            await callsmusic.pytgcalls.resume_stream(chat_id)
+            await callsmusic.pytgcalls.resume_stream(chet_id)
             await cb.message.edit(psn, reply_markup=keyboard)
 
     elif type_ == "puse":
         spn = "⏸ music playback has paused"
+        ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) not in ACTV_CALLS:
+            ACTV_CALLS.append(int(x.chet_id))
+        if int(chet_id) not in ACTV_CALLS:
             await cb.answer(
                 "voice chat is not connected or already paused", show_alert=True
             )
         else:
-            await callsmusic.pytgcalls.pause_stream(chat_id)
+            await callsmusic.pytgcalls.pause_stream(chet_id)
             await cb.message.edit(spn, reply_markup=keyboard)
 
     elif type_ == "cls":
@@ -436,30 +440,31 @@ async def m_cb(b, cb):
         mmk = "⏭ you skipped to the next music"
         if qeue:
             qeue.pop(0)
+        ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) not in ACTV_CALLS:
+            ACTV_CALLS.append(int(x.chet_id))
+        if int(chet_id) not in ACTV_CALLS:
             await cb.answer(
                 "assistant is not connected to voice chat !", show_alert=True
             )
         else:
-            callsmusic.queues.task_done(chat_id)
+            callsmusic.queues.task_done(chet_id)
             
-            if callsmusic.queues.is_empty(chat_id):
-                await callsmusic.pytgcalls.leave_group_call(chat_id)
+            if callsmusic.queues.is_empty(chet_id):
+                await callsmusic.pytgcalls.leave_group_call(chet_id)
                 
                 await cb.message.edit(
                     nmq,
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")]]
+                        [[InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="close")]]
                     ),
                 )
             else:
                 await callsmusic.pytgcalls.change_stream(
-                    chat_id, 
+                    chet_id, 
                     InputStream(
                         InputAudioStream(
-                            callsmusic.queues.get(chat_id)["file"],
+                            callsmusic.queues.get(chet_id)["file"],
                         ),
                     ),
                 )
@@ -467,14 +472,15 @@ async def m_cb(b, cb):
 
     elif type_ == "leave":
         hps = "✅ **the music playback has ended**"
+        ACTV_CALLS = []
         for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) not in ACTV_CALLS:
+            ACTV_CALLS.append(int(x.chet_id))
+        if int(chet_id) not in ACTV_CALLS:
             try:
-                callsmusic.queues.clear(chat_id)
+                callsmusic.queues.clear(chet_id)
             except QueueEmpty:
                 pass
-            await callsmusic.pytgcalls.leave_group_call(chat_id)
+            await callsmusic.pytgcalls.leave_group_call(chet_id)
             await cb.message.edit(
                 hps,
                 reply_markup=InlineKeyboardMarkup(
@@ -486,14 +492,13 @@ async def m_cb(b, cb):
                 "userbot is not connected to voice chat.", show_alert=True
             )
 
-
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
 async def ytplay(_, message: Message):
-    chat_id = get_chat_id(message.chat)
+    
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("༎⃝🥀𝐂𝐌𝐃 𝐒𝐘𝐍𝐓𝐀𝐗༎⃝➤", callback_data="cmdsyntax")
+                InlineKeyboardButton("༎⃝🌺𝐂𝐌𝐃 𝐋𝐈𝐒𝐓༎⃝➤", callback_data="cmdsyntax")
             ],[
                 InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")
             ]
@@ -505,7 +510,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("**𝙶𝙷𝙾𝚂𝚃 𝙼𝚄𝚂𝙸𝙲 𝙾𝙽 𝙵𝙸𝚁𝙴 🔥**")
+    lel = await message.reply("**𝙶𝙷𝙾𝚂𝚃 𝙼𝚄𝚂𝙸𝙲 𝙾𝙽 𝙵𝙸𝚁𝙴🔥**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -526,8 +531,6 @@ async def ytplay(_, message: Message):
                     )
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
-                    if invitelink.startswith("https://t.me/+"):
-                        invitelink = invitelink.replace("https://t.me/+","https://t.me/joinchat/")
                 except:
                     await lel.edit(
                         "💡 **To use me, I need to be an Administrator with the permissions:\n\n» ❌ __Delete messages__\n» ❌ __Ban users__\n» ❌ __Add users__\n» ❌ __Manage voice chat__\n\n**Then type /reload**",
@@ -560,7 +563,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🔥 **𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂**")
+    await lel.edit("**𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙽𝙶 𝚃𝙾 𝙳𝙰𝚁𝙺 𝚂𝙴𝚁𝚅𝙴𝚁𝚂🔥**")
     ydl_opts = {"format": "bestaudio/best"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -607,9 +610,10 @@ async def ytplay(_, message: Message):
     )
     await generate_cover(title, thumbnail, ctitle)
     file_path = await converter.convert(youtube.download(url))
+    ACTV_CALLS = []
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
-    if int(chat_id) in ACTV_CALLS:
+    if int(message.chat.id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
@@ -620,7 +624,7 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"💡 **𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴 ✘** [{title[:35]}...]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {message.from_user.mention}",
+            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:35]}...]({url})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -650,7 +654,7 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **𝙽𝙰𝙼𝙴 ✘** [{title[:70]}]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂 ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            caption=f"🏷  **𝙽𝙰𝙼𝙴 ✘** [{title[:70]}]({url})\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂 ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
             + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {message.from_user.mention}",
             reply_markup=keyboard,
         )
