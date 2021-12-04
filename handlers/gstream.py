@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Veez Music-Project
+# Copyright (C) 2021 GHOST Music-Project
 
 from os import path
 import converter
