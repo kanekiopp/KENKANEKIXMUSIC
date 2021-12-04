@@ -1,3 +1,6 @@
+import os
+import psutil
+import time
 from time import time
 from sys import version_info
 from datetime import datetime
@@ -30,16 +33,27 @@ async def _human_time_duration(seconds):
                          .format(amount, unit, "" if amount == 1 else "s"))
     return ', '.join(parts)
 
+async def bot_sys_stats():
+    bot_uptime = int(time.time() - Music_START_TIME)
+    cpu = psutil.cpu_percent(interval=0.5)
+    mem = psutil.virtual_memory().percent
+    disk = psutil.disk_usage("/").percent
+    stats = f'''
+Uptime: {get_readable_time((bot_uptime))}
+CPU: {cpu}%
+RAM: {mem}%
+Disk: {disk}%'''
+    return stats
 
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
-async def ping_pong(client: Client, message: Message):
-    start = time()
-    m_reply = await message.reply_text("〘 ♕ ᑭɪɳց! ♕ 〙")
-    delta_ping = time() - start
-    await message.reply_photo(
-    photo=f"{ALIVE_IMG}",
-    caption=f"**`〘 ♕ ᑭσɳց! ♕ 〙`\n" f"〘🔥`{delta_ping * 1000:.3f} ms`〙**"
-   )
+@client.on_message(filters.command(["ping", "ping@{BOT_USERNAME}"]))
+async def ping(_, message):
+    uptime = await bot_sys_stats()
+    start = datetime.now()
+    response = await message.reply_photo(
+        photo="{ALIVE_IMG}",
+        caption=">> Pong!"
+    )
+
 
 @Client.on_message(filters.command(["uptime", f"uptime@{BOT_USERNAME}"]))
 async def get_uptime(client: Client, message: Message):
