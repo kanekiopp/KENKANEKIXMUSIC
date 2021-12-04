@@ -1,13 +1,9 @@
-from datetime import datetime
-from sys import version_info
 from time import time
-
-from config import (
-    ALIVE_IMG,
-)
-from helpers.filters import command
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from sys import version_info
+from datetime import datetime
+from config import ALIVE_IMG, BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
+from helpers.filters import command, other_filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 __major__ = 0
 __minor__ = 2
