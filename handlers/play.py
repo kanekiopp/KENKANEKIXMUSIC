@@ -603,7 +603,7 @@ async def ytplay(_, message: Message):
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
-    file_path = await convert(youtube.download(url))
+    file_path = await converter.convert(youtube.download(url))
     for x in callsmusic.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) in ACTV_CALLS:
