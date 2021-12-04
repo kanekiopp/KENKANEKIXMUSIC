@@ -67,3 +67,31 @@ async def get_uptime(client: Client, message: Message):
             ]
         )
     )
+
+@Client.on_message(filters.command(["alive", f"alive@{BOT_USERNAME}"]))
+async def alive(client: Client, message: Message):
+    current_time = datetime.utcnow()
+    uptime_sec = (current_time - START_TIME).total_seconds()
+    uptime = await _human_time_duration(int(uptime_sec))
+    await message.reply_photo(
+        photo=f"{ALIVE_IMG}",
+        caption=f"""**༎⃝💜 𝐇𝐈 𝐈,𝐌  [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
+ **༎⃝💔𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂 𝐖𝐎𝐑𝐊𝐈𝐍𝐆 𝐅𝐈𝐍𝐄
+**
+ **༎⃝🥀𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂 𝐕𝐄𝐑𝐒𝐈𝐎𝐍༎⃝➤ 𝟶.𝟽.𝟶 𝐋𝐄𝐓𝐄𝐒𝐓**
+ **༎⃝🔥𝐎𝐖𝐍𝐄𝐑༎⃝➤ [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
+ **༎⃝🌸𝐔𝐏𝐓𝐈𝐌𝐄༎⃝➤ `{uptime}`**
+**༎⃝🔥𝐓𝐇𝐍𝐗 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂༎⃝➤**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
+                    InlineKeyboardButton(
+                        "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    )
+                ]
+            ]
+        )
+    )
