@@ -1,14 +1,9 @@
-import os
-import psutil
-import time
 from time import time
 from sys import version_info
 from datetime import datetime
 from config import ALIVE_IMG, BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
 from helpers.filters import command, other_filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from helpers.time import get_readable_time
-
 
 __major__ = 0
 __minor__ = 2
@@ -23,38 +18,6 @@ TIME_DURATION_UNITS = (
     ("min", 60),
     ("sec", 1),
 )
-
-async def _human_time_duration(seconds):
-    if seconds == 0:
-        return 'inf'
-    parts = []
-    for unit, div in TIME_DURATION_UNITS:
-        amount, seconds = divmod(int(seconds), div)
-        if amount > 0:
-            parts.append('{} {}{}'
-                         .format(amount, unit, "" if amount == 1 else "s"))
-    return ', '.join(parts)
-
-async def bot_sys_stats():
-    bot_uptime = int(time.time() - START_TIME)
-    cpu = psutil.cpu_percent(interval=0.5)
-    mem = psutil.virtual_memory().percent
-    disk = psutil.disk_usage("/").percent
-    stats = f'''
-Uptime: {get_readable_time((bot_uptime))}
-CPU: {cpu}%
-RAM: {mem}%
-Disk: {disk}%'''
-    return stats
-
-@client.on_message(filters.command(["ping", "ping@{BOT_USERNAME}"]))
-async def ping(_, message):
-    uptime = await bot_sys_stats()
-    start = datetime.now()
-    response = await message.reply_photo(
-        photo="{ALIVE_IMG}",
-        caption=">> Pong!"
-    )
 
 
 @Client.on_message(filters.command(["uptime", f"uptime@{BOT_USERNAME}"]))
