@@ -38,7 +38,8 @@ async def ping_pong(client: Client, message: Message):
     await message.reply_photo(
     photo=f"{ALIVE_IMG}",
     caption=f"**`〘 ♕ ᑭσɳց! ♕ 〙`\n" f"〘🔥`{delta_ping * 1000:.3f} ms`〙**"
-
+     
+    )
 
 @Client.on_message(filters.command(["uptime", f"uptime@{BOT_USERNAME}"]))
 async def get_uptime(client: Client, message: Message):
