@@ -4,7 +4,7 @@ from os import path
 import converter
 from callsmusic import callsmusic, queues
 from config import (
-    AUD_IMG,
+    ALIVE_IMG,
     BOT_USERNAME,
     DURATION_LIMIT,
     GROUP_SUPPORT,
