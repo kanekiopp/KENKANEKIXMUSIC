@@ -487,7 +487,7 @@ async def m_cb(b, cb):
             )
 
 
-@Client.on_message(command(["play", f"ytp@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) other_filters)
 async def play(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
