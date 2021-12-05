@@ -490,20 +490,20 @@ async def m_cb(b, cb):
 
 
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
-async def play(_, message: Message):
+@@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
+async def ytplay(_, message: Message):
     
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Command", callback_data="cmdsyntax")
+                InlineKeyboardButton("Command Syntax", callback_data="cmdsyntax")
             ],[
                 InlineKeyboardButton("🗑 Close", callback_data="close")
             ]
         ]
     )
     
-    nofound = "❗ **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
+    nofound = "😕 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
     
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -561,7 +561,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎧 **connecting to vc...**")
+    await lel.edit("🔄 **connecting to vc...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -600,16 +600,17 @@ async def play(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⚙️ Menu", callback_data="menu"),
-                InlineKeyboardButton("🗑️ Close", callback_data="cls")
+                InlineKeyboardButton("• Mᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("• Cʟᴏsᴇ", callback_data="cls"),
             ],
+            [InlineKeyboardButton("• Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
     file_path = await converter.convert(youtube.download(url))
     for x in callsmusic.pytgcalls.active_calls:
-            ACTV_CALLS.append(int(x.chat_id))
-        if int(chat_id) in ACTV_CALLS:
+        ACTV_CALLS.append(int(x.chat_id))
+    if int(chat_id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         qeue = que.get(chat_id)
         s_name = title
@@ -633,15 +634,7 @@ async def play(_, message: Message):
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
         try:
-            await callsmusic.pytgcalls.join_group_call(
-                chat_id, 
-                InputStream(
-                    InputAudioStream(
-                        file_path,
-                    ),
-                ),
-                stream_type=StreamType().local_stream,
-            )
+            callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
             await lel.edit(
                 "😕 **voice chat not found**\n\n» please turn on the voice chat first"
