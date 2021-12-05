@@ -485,11 +485,6 @@ async def m_cb(b, cb):
             await cb.answer(
                 "userbot is not connected to voice chat.", show_alert=True
             )
-
-
-
-
-
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
 async def ytplay(_, message: Message):
     
