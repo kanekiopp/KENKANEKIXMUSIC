@@ -58,25 +58,25 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💫𝗦𝗨𝗠𝗠𝗢𝗡 𝗠𝗘💫",
+                        "💫𝗦ᴜᴍᴍᴏɴ 𝗠ᴇ💫",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
                 [
-                    InlineKeyboardButton("✨𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", callback_data="cbcmds"),
-                    InlineKeyboardButton("🌈𝗕𝗔𝗦𝗜𝗖 𝗚𝗨𝗜𝗗𝗘", callback_data="cbhowtouse"),
+                    InlineKeyboardButton("✨𝗖ᴏᴍᴍᴀɴᴅs", callback_data="cbcmds"),
+                    InlineKeyboardButton("🌈𝗕ᴀsɪᴄ 𝗚ᴜɪᴅᴇ", callback_data="cbhowtouse"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "👅𝗖𝗛𝗜𝗧 𝗖𝗛𝗔𝗧", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👅𝗖ʜɪᴛ 𝗖ʜᴀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🗯️𝗡𝗘𝗧 𝗪𝗢𝗥𝗞", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🗯️𝗡ᴇᴛ 𝗪ᴏʀᴋ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "❤️𝗧𝗥𝗢𝗝𝗔𝗡 𝗙𝗘𝗗❤️", url="https://t.me/TROJANS_FED"
+                        "❤️𝗧ʀᴏᴊᴀɴ 𝗙ᴇᴅ❤️", url="https://t.me/TROJANS_FED"
                     )
                 ],
             ]
