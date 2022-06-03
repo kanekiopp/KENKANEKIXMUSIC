@@ -77,7 +77,6 @@ async def start_(client: Client, message: Message):
                         "༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤", callback_data="cbhowtouse"),
                 ],
             ]
-        ),
         disable_web_page_preview=True,
     )
 
