@@ -73,11 +73,9 @@ async def start_(client: Client, message: Message):
                         "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 [
-                    InlineKeyboardButton(
-                        "༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤", callback_data="cbhowtouse"),
+                    InlineKeyboardButton("༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤", callback_data="cbhowtouse"),
                 ],
-            ]
-        ),  
+            ]  
         disable_web_page_preview=True,
     )
 
