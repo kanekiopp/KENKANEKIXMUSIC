@@ -76,10 +76,10 @@ async def start_(client: Client, message: Message):
                 [
                     InlineKeyboardButton(
                         "🌐 Source Code", url="https://github.com"
-                    )
-                ]
+                    ),
+                ],
             ]
-        )
+        
      
 
 @Client.on_message(
