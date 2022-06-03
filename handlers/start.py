@@ -51,10 +51,9 @@ async def _human_time_duration(seconds):
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAIBVmGsmwYc9XwicImk5Taqj68VcNqOAAINBQAC18VpVSP_OiTpAQIRIgQ")
-    await message.reply_text(
-        f"""✨ **𝐖𝐄𝐋𝐂𝐎𝐌𝐄 {message.from_user.mention()} !**\n
-🔥 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖.**""",
+        await message.reply_photo(
+        photo=f"{ALIVE_IMG}",
+        caption=f"""✨ **𝐈 𝐂𝐀𝐍 𝐏𝐋𝐀𝐘 𝐌𝐔𝐒𝐈𝐂 𝐈𝐍 𝐘𝐎𝐔𝐑 𝐎𝐏 𝐆𝐑𝐎𝐔𝐏 𝐕𝐎𝐈𝐂𝐄 𝐂𝐇𝐀𝐓 💖.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -62,8 +61,6 @@ async def start_(client: Client, message: Message):
                         "༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
-                ],
-                [InlineKeyboardButton("༎⃝💖𝐇𝐎𝐖 𝐓𝐎 𝐔𝐒𝐄 𝐌𝐄༎⃝➤", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("༎⃝🌸𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒༎⃝➤", callback_data="cbcmds"),
                     InlineKeyboardButton("༎⃝💔𝐂𝐑𝐄𝐀𝐓𝐄𝐑༎⃝➤", url=f"https://t.me/{OWNER_NAME}"),
@@ -75,6 +72,9 @@ async def start_(client: Client, message: Message):
                     InlineKeyboardButton(
                         "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
+                [
+                    InlineKeyboardButton(
+                        "༎⃝✨𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐆..༎⃝➤", callback_data="cbhowtouse"),
                 ],
             ]
         ),
