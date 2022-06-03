@@ -61,6 +61,7 @@ async def start_(client: Client, message: Message):
                         "➕ Add me to your Group ➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
+                ],
                 [
                     InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
                     InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse"),
