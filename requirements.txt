@@ -1,7 +1,7 @@
 pyrogram==1.4.16
 tgcrypto
 youtube-search
-git+https://github.com/AMAN-GUJJAR/yt-dl@master
+yt-dlp
 py-tgcalls
 python-dotenv
 requests
