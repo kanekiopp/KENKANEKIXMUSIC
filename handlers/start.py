@@ -58,25 +58,25 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💫𝗦ᴜᴍᴍᴏɴ 𝗠ᴇ💫",
+                        "💫𝗦𝗨𝗠𝗠𝗢𝗡 𝗠𝗘💫",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
                 [
-                    InlineKeyboardButton("✨𝗖ᴏᴍᴍᴀɴᴅs", callback_data="cbcmds"),
-                    InlineKeyboardButton("🌈𝗕ᴀsɪᴄ 𝗚ᴜɪᴅᴇ", callback_data="cbhowtouse"),
+                    InlineKeyboardButton("✨𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦", callback_data="cbcmds"),
+                    InlineKeyboardButton("🌈𝗕𝗔𝗦𝗜𝗖 𝗚𝗨𝗜𝗗𝗘", callback_data="cbhowtouse"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "👅𝗖ʜɪᴛ 𝗖ʜᴀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👅𝗖𝗛𝗜𝗧 𝗖𝗛𝗔𝗧", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🗯️𝗡ᴇᴛ 𝗪ᴏʀᴋ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🗯️𝗡𝗘𝗧 𝗪𝗢𝗥𝗞", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "❤️𝗧ʀᴏᴊᴀɴ 𝗙ᴇᴅ❤️", url="https://t.me/TROJANS_FED"
+                        "❤️𝗧𝗥𝗢𝗝𝗔𝗡𝗦 𝗙𝗘𝗗❤️", url="https://t.me/TROJANS_FED"
                     )
                 ],
             ]
@@ -89,11 +89,11 @@ async def start_(client: Client, message: Message):
 )
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **𝐇𝐄𝐋𝐋𝐎** {message.from_user.mention()} !
+        f"""✨ **𝗛𝗘𝗟𝗟𝗢** {message.from_user.mention()} !
 » **press the button below to read the explanation and see the list of available commands !**
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="༎⃝💜𝐁𝐀𝐒𝐈𝐂 𝐆𝐔𝐈𝐃𝐄༎⃝➤", callback_data="cbguide")]]
+            [[InlineKeyboardButton(text="𝐇𝐄𝐋𝐏", callback_data="cbguide")]]
         ),
     )
 
@@ -113,14 +113,14 @@ async def get_uptime(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
-        caption=f"""**༎⃝💜𝐁𝐎𝐓 𝐒𝐓𝐀𝐓𝐔𝐒༎⃝➤ ✘\n**
- **༎⃝🔥𝐔𝐏𝐓𝐈𝐌𝐄༎⃝➤ ✘** `{uptime}`\n**
- **༎⃝🌺𝐒𝐓𝐀𝐑𝐓 𝐓𝐈𝐌𝐄༎⃝➤ ✘** `{START_TIME_ISO}`**""",
+        caption=f"""**✨𝗕𝗢𝗧 𝗦𝗧𝗔𝗧𝗨𝗦✨\n**
+ **𝗨𝗣𝗧𝗜𝗠𝗘** `{uptime}`\n**
+ **𝗦𝗧𝗔𝗥𝗧 𝗧𝗜𝗠𝗘** `{START_TIME_ISO}`**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🔥𝗡𝗘𝗧𝗪𝗢𝗥𝗞🔥", url=f"https://t.me/{UPDATES_CHANNEL}"
                    )
                 ]
             ]
