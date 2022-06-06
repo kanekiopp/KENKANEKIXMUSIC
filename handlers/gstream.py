@@ -20,10 +20,10 @@ from pytgcalls.types.input_stream import InputStream
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
-@Client.on_message(command(["ghost", f"ghost@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["kaneki", f"kaneki@{BOT_USERNAME}"]) & other_filters)
 async def ghost(_, message: Message):
     costumer = message.from_user.mention
-    lel = await message.reply_text("**༎⃝💔𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐍𝐆 𝐓𝐎 𝐆𝐇𝐎𝐒𝐓 𝐒𝐄𝐑𝐕𝐄𝐑𝐒༎⃝➤**")
+    lel = await message.reply_text("**༎⃝🥀𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐍𝐆 𝐓𝐎 𝐊𝐀𝐍𝐄𝐊𝐈 𝐒𝐄𝐑𝐕𝐄𝐑𝐒༎⃝➤**")
 
     keyboard = InlineKeyboardMarkup(
         [
