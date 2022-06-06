@@ -503,7 +503,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("**༎⃝🔥𝐆𝐇𝐎𝐒𝐓 𝐌𝐔𝐒𝐈𝐂 𝐎𝐍 𝐅𝐈𝐑𝐄༎⃝🔥**")
+    lel = await message.reply("**༎⃝🔥𝐊𝐄𝐍𝐊𝐀𝐍𝐄𝐊𝐈 𝐌𝐔𝐒𝐈𝐂 𝐎𝐍 𝐅𝐈𝐑𝐄༎⃝🔥**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
