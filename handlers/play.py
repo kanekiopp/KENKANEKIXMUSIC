@@ -120,9 +120,9 @@ async def playlist(client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -177,9 +177,9 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", "playlist"),
+                InlineKeyboardButton("Pʟᴀʏʟɪsᴛ", "playlist"),
             ],
-            [InlineKeyboardButton("ᴄʟᴏsᴇ", "cls")],
+            [InlineKeyboardButton("Cʟᴏsᴇ", "cls")],
         ]
     )
     return mar
@@ -256,12 +256,12 @@ async def p_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-            [InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")],
+            [InlineKeyboardButton("Mᴇɴᴜ", callback_data="menu")],
         ]
     )
 
@@ -304,12 +304,12 @@ async def m_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-            [InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")],
+            [InlineKeyboardButton("Mᴇɴᴜ", callback_data="menu")],
         ]
     )
 
@@ -418,9 +418,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", "playlist"),
+                    InlineKeyboardButton("Pʟᴀʏʟɪsᴛ", "playlist"),
                 ],
-                [InlineKeyboardButton("ᴄʟᴏsᴇ", "cls")],
+                [InlineKeyboardButton("Cʟᴏsᴇ", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -445,7 +445,7 @@ async def m_cb(b, cb):
                 await cb.message.edit(
                     nmq,
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")]]
+                        [[InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")]]
                     ),
                 )
             else:
@@ -472,7 +472,7 @@ async def m_cb(b, cb):
             await cb.message.edit(
                 hps,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")]]
+                    [[InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")]]
                 ),
             )
         else:
@@ -485,9 +485,9 @@ async def ytplay(_, message: Message):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("ᴄᴍᴅ's", callback_data="cmdsyntax")
+                InlineKeyboardButton("Cᴍᴅ's", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
             ]
         ]
     )
@@ -497,7 +497,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("**ᴋᴇɴᴋᴀɴᴇᴋɪ ᴍᴜsɪᴄ ᴏɴ ғɪʀᴇ🔥**")
+    lel = await message.reply("**KᴇɴKᴀɴᴇᴋɪ Mᴜsɪᴄ Oɴ Fɪʀᴇ🔥**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -552,7 +552,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("**ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ᴋᴀɴᴇᴋɪ sᴇʀᴠᴇʀ**")
+    await lel.edit("**Cᴏɴɴᴇᴄᴛɪɴɢ Tᴏ Kᴀɴᴇᴋɪ Sᴇʀᴠᴇʀ**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -597,10 +597,10 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton("Mᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="cls"),
             ],
-            [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
@@ -621,7 +621,7 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"**ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴅ»** `{position}`\n\n🏷 **ɴᴀᴍᴇ ✘** [{title[:35]}...]({url})\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n🎧 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ✘** {message.from_user.mention}",
+            caption=f"**Tʀᴀᴄᴋ Aᴅᴅᴇᴅ Tᴏ Qᴜᴇᴜᴇ»** `{position}`\n\n🏷 **Nᴀᴍᴇ ✘** [{title[:35]}...]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛᴇᴅ Bʏ ✘** {message.from_user.mention}",
             reply_markup=keyboard,
         )
     else:
@@ -651,8 +651,8 @@ async def ytplay(_, message: Message):
         await lel.delete()
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **ɴᴀᴍᴇ ✘** [{title[:70]}]({url})\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n💡 **sᴛᴀᴛᴜs** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"🎧 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ✘** {message.from_user.mention}",
+            caption=f"🏷 **Nᴀᴍᴇ ✘** [{title[:70]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n💡 **Sᴛᴀᴛᴜs** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"🎧 **Rᴇǫᴜᴇsᴛᴇᴅ Bʏ ✘** {message.from_user.mention}",
             reply_markup=keyboard,
         )
         os.remove("final.png")
