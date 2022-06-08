@@ -61,7 +61,7 @@ async def ghost(_, message: Message):
     if chat_id in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
-            photo="https://telegra.ph/file/58da23d726b601dc3b18e.jpg",
+            photo="https://telegra.ph/file/822494e7e9746743d2f07.jpg",
             caption=f"💡 **Tʀᴀᴄᴋ Aᴅᴅᴇᴅ Tᴏ Qᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ ✘** {title[:50]}\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ ✘** {costumer}",
             reply_markup=keyboard,
         )
@@ -75,7 +75,7 @@ async def ghost(_, message: Message):
             ),
         )
         await message.reply_photo(
-            photo="https://telegra.ph/file/58da23d726b601dc3b18e.jpg",
+            photo="https://telegra.ph/file/822494e7e9746743d2f07.jpg",
             caption=f"🏷 **Nᴀᴍᴇ ✘** {title[:50]}\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n💡 **Sᴛᴀᴛᴜs ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
             + f"🎧 **Rᴇǫᴜᴇsᴛ Bʏ✘** {costumer}",
             reply_markup=keyboard,
