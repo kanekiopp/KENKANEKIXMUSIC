@@ -212,15 +212,15 @@ async def cbback(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏸ 𝙿𝙰𝚄𝚂𝙴", callback_data="cbpause"),
-                    InlineKeyboardButton("▶️ 𝚁𝙴𝚂𝚄𝙼𝙴", callback_data="cbresume"),
+                    InlineKeyboardButton("|| 𝙿𝙰𝚄𝚂𝙴", callback_data="cbpause"),
+                    InlineKeyboardButton("|> 𝚁𝙴𝚂𝚄𝙼𝙴", callback_data="cbresume"),
                 ],
                 [
-                    InlineKeyboardButton("⏩ 𝚂𝙺𝙸𝙿", callback_data="cbskip"),
-                    InlineKeyboardButton("⏹ 𝚂𝚃𝙾𝙿", callback_data="cbend"),
+                    InlineKeyboardButton("|>|| 𝚂𝙺𝙸𝙿", callback_data="cbskip"),
+                    InlineKeyboardButton("■ 𝚂𝚃𝙾𝙿", callback_data="cbend"),
                 ],
-                [InlineKeyboardButton("⛔ 𝙰𝙽𝚃𝙸 𝙲𝙼𝙳", callback_data="cbdelcmds")],
-                [InlineKeyboardButton("🗑 𝙲𝙻𝙾𝚂𝙴", callback_data="close")],
+                [InlineKeyboardButton("𝙰𝙽𝚃𝙸 𝙲𝙼𝙳", callback_data="cbdelcmds")],
+                [InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data="close")],
             ]
         ),
     )
