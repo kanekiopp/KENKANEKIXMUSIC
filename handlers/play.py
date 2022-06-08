@@ -655,6 +655,7 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("▶️", "resume"),
                     InlineKeyboardButton("⏭", "skip"),
                 ],
+)
             reply_markup=keyboard,
         )
         os.remove("final.png")
