@@ -2,7 +2,6 @@ import aiohttp
 from io import BytesIO
 from traceback import format_exc
 from pyrogram.types import Message
-from Python_ARQ import ARQ
 from pyrogram import Client, filters
 from Process.main import bot as app
 
