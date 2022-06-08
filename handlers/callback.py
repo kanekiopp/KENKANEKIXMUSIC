@@ -57,15 +57,15 @@ async def cbhelp(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ʙᴀsɪᴄ", callback_data="cbbasic"),
-                    InlineKeyboardButton("ᴀᴅᴠᴀɴᴄᴇᴅ", callback_data="cbadvanced"),
+                    InlineKeyboardButton("Bᴀsɪᴄ", callback_data="cbbasic"),
+                    InlineKeyboardButton("Aᴅᴠᴀɴᴄᴇᴅ", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("ᴀᴅᴍɪɴ", callback_data="cbadmin"),
-                    InlineKeyboardButton("sᴜᴅᴏ", callback_data="cbsudo"),
+                    InlineKeyboardButton("Aᴅᴍɪɴ", callback_data="cbadmin"),
+                    InlineKeyboardButton("Sᴜᴅᴏ", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("ᴏᴡɴᴇʀ", callback_data="cbowner")],
-                [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbguide")],      
+                [InlineKeyboardButton("Oᴡɴᴇʀ", callback_data="cbowner")],
+                [InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbguide")],      
             ]
         ),
     )
@@ -99,7 +99,7 @@ async def cbbasic(_, query: CallbackQuery):
 /ubjoinc - invite the assistant for join to your channel
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -116,7 +116,7 @@ async def cbadvanced(_, query: CallbackQuery):
 /id - show the group/user id & other
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -140,7 +140,7 @@ async def cbadmin(_, query: CallbackQuery):
 /music (on / off) - disable / enable music player in your group
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -157,7 +157,7 @@ async def cbsudo(_, query: CallbackQuery):
 /sh (query) - run code
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -175,7 +175,7 @@ async def cbowner(_, query: CallbackQuery):
 📝 note:all commands owned by this bot can be executed by the owner of the bot without any exception𝚂.
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -193,7 +193,7 @@ async def cbguide(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("ᴄᴍᴅ ʟɪsᴛ", callback_data="cbhelp")],
-                [InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")],
+                [InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")],
             ]
         ),
     )
@@ -243,7 +243,7 @@ async def cbdelcmds(_, query: CallbackQuery):
       
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbback")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cbback")]]
         ),
     )
 
@@ -401,9 +401,9 @@ async def cmdhome(_, query: CallbackQuery):
     bttn = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("ᴄᴍᴅ sʏɴᴛx", callback_data="cmdsyntax")
+                InlineKeyboardButton("Cᴍᴅ Sʏɴᴛx", callback_data="cmdsyntax")
             ],[
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
             ]
         ]
     )
@@ -423,6 +423,6 @@ async def cmdsyntax(_, query: CallbackQuery):
 
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cmdhome")]]
+            [[InlineKeyboardButton("Bᴀᴄᴋ", callback_data="cmdhome")]]
         ),
     )
