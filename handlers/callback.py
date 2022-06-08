@@ -57,15 +57,15 @@ async def cbhelp(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("༎⃝💜𝐁𝐀𝐒𝐈𝐂༎⃝➤", callback_data="cbbasic"),
-                    InlineKeyboardButton("༎⃝✨𝐀𝐃𝐕𝐀𝐍𝐂𝐄𝐃..༎⃝➤", callback_data="cbadvanced"),
+                    InlineKeyboardButton("ʙᴀsɪᴄ", callback_data="cbbasic"),
+                    InlineKeyboardButton("ᴀᴅᴠᴀɴᴄᴇᴅ", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("༎⃝🌸𝐀𝐃𝐌𝐈𝐍༎⃝➤", callback_data="cbadmin"),
-                    InlineKeyboardButton("༎⃝🥀𝐒𝐔𝐃𝐎༎⃝➤", callback_data="cbsudo"),
+                    InlineKeyboardButton("ᴀᴅᴍɪɴ", callback_data="cbadmin"),
+                    InlineKeyboardButton("sᴜᴅᴏ", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("༎⃝🔥𝐎𝐖𝐍𝐄𝐑༎⃝➤", callback_data="cbowner")],
-                [InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbguide")],      
+                [InlineKeyboardButton("ᴏᴡɴᴇʀ", callback_data="cbowner")],
+                [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbguide")],      
             ]
         ),
     )
@@ -99,7 +99,7 @@ async def cbbasic(_, query: CallbackQuery):
 /ubjoinc - invite the assistant for join to your channel
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -116,7 +116,7 @@ async def cbadvanced(_, query: CallbackQuery):
 /id - show the group/user id & other
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -140,7 +140,7 @@ async def cbadmin(_, query: CallbackQuery):
 /music (on / off) - disable / enable music player in your group
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -157,7 +157,7 @@ async def cbsudo(_, query: CallbackQuery):
 /sh (query) - run code
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -175,7 +175,7 @@ async def cbowner(_, query: CallbackQuery):
 📝 note:all commands owned by this bot can be executed by the owner of the bot without any exception𝚂.
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("༎⃝💖𝐁𝐀𝐂𝐊༎⃝➤", callback_data="cbhelp")]]
+            [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cbhelp")]]
         ),
     )
 
@@ -192,8 +192,8 @@ async def cbguide(_, query: CallbackQuery):
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME} 𝙰.𝙸__""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("༎⃝🌺𝐂𝐌𝐃 𝐋𝐈𝐒𝐓༎⃝➤", callback_data="cbhelp")],
-                [InlineKeyboardButton("༎⃝💔𝐂𝐋𝐎𝐒𝐄༎⃝➤", callback_data="close")],
+                [InlineKeyboardButton("ᴄᴍᴅ ʟɪsᴛ", callback_data="cbhelp")],
+                [InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")],
             ]
         ),
     )
