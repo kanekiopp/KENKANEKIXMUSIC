@@ -412,10 +412,10 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "leave"),
-                    InlineKeyboardButton("⏸", "puse"),
-                    InlineKeyboardButton("▶️", "resume"),
-                    InlineKeyboardButton("⏭", "skip"),
+                    InlineKeyboardButton("■", "leave"),
+                    InlineKeyboardButton("||", "puse"),
+                    InlineKeyboardButton("|>", "resume"),
+                    InlineKeyboardButton("|>||", "skip"),
                 ],
                 [
                     InlineKeyboardButton("Pʟᴀʏʟɪsᴛ", "playlist"),
@@ -591,10 +591,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
          [
-                InlineKeyboardButton("⏹", "leave"),
-                InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
-                InlineKeyboardButton("⏭", "skip"),
+                InlineKeyboardButton("■", "leave"),
+                InlineKeyboardButton("||", "puse"),
+                InlineKeyboardButton("|>", "resume"),
+                InlineKeyboardButton("|>||", "skip"),
             ],
             [
                 InlineKeyboardButton("Mᴇɴᴜ", callback_data="menu"),
