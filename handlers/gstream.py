@@ -23,16 +23,16 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 @Client.on_message(command(["kaneki", f"kaneki@{BOT_USERNAME}"]) & other_filters)
 async def ghost(_, message: Message):
     costumer = message.from_user.mention
-    lel = await message.reply_text("**༎⃝🥀𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐈𝐍𝐆 𝐓𝐎 𝐊𝐀𝐍𝐄𝐊𝐈 𝐒𝐄𝐑𝐕𝐄𝐑𝐒༎⃝➤**")
+    lel = await message.reply_text("**Cᴏɴɴᴇᴄᴛɪɴɢ Tᴏ Kᴀɴᴇᴋɪ Sᴇʀᴠᴇʀ🔥**")
 
     keyboard = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="༎⃝🌺𝐒𝐔𝐏𝐏𝐎𝐑𝐓༎⃝➤", url=f"https://t.me/{GROUP_SUPPORT}"
+                    text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"
                 ),
                 InlineKeyboardButton(
-                    text="༎⃝🥀𝐔𝐏𝐃𝐀𝐓𝐄𝐒༎⃝➤", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    text="Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -41,7 +41,7 @@ async def ghost(_, message: Message):
     audio = message.reply_to_message.audio if message.reply_to_message else None
     if not audio:
         return await lel.edit("💭 **please reply to a telegram audio file**")
-    if round(audio.duration / 60) > DURATION_LIMIT:
+    if round(audio.duration / 20) > DURATION_LIMIT:
         return await lel.edit(
             f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
         )
@@ -61,8 +61,8 @@ async def ghost(_, message: Message):
     if chat_id in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
-            photo=f"{ALIVE_IMG}",
-            caption=f"💡 **𝚃𝚁𝙰𝙲𝙺 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝚀𝚄𝙴𝚄𝙴 »** `{position}`\n\n🏷 **𝙽𝙰𝙼𝙴 ✘** {title[:50]}\n⏱ **Duration ✘** `{duration}`\n🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {costumer}",
+            photo="https://telegra.ph/file/58da23d726b601dc3b18e.jpg",
+            caption=f"💡 **Tʀᴀᴄᴋ Aᴅᴅᴇᴅ Tᴏ Qᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ ✘** {title[:50]}\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ ✘** {costumer}",
             reply_markup=keyboard,
         )
     else:
@@ -75,9 +75,9 @@ async def ghost(_, message: Message):
             ),
         )
         await message.reply_photo(
-            photo=f"{ALIVE_IMG}",
-            caption=f"🏷 **𝙽𝙰𝙼𝙴 ✘** {title[:50]}\n⏱ **𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 ✘** `{duration}`\n💡 **𝚂𝚃𝙰𝚃𝚄𝚂 ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
-            + f"🎧 **𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈 ✘** {costumer}",
+            photo="https://telegra.ph/file/58da23d726b601dc3b18e.jpg",
+            caption=f"🏷 **Nᴀᴍᴇ ✘** {title[:50]}\n⏱ **Dᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n💡 **Sᴛᴀᴛᴜs ✘** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
+            + f"🎧 **Rᴇǫᴜᴇsᴛ Bʏ✘** {costumer}",
             reply_markup=keyboard,
         )
 
