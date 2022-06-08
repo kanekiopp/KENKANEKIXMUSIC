@@ -177,12 +177,6 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
-                InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
-                InlineKeyboardButton("⏭", "skip"),
-            ],
-            [
                 InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", "playlist"),
             ],
             [InlineKeyboardButton("ᴄʟᴏsᴇ", "cls")],
@@ -653,6 +647,12 @@ async def ytplay(_, message: Message):
             photo="final.png",
             caption=f"🏷 **ɴᴀᴍᴇ ✘** [{title[:70]}]({url})\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ ✘** `{duration}`\n💡 **sᴛᴀᴛᴜs** `𝙿𝙻𝙰𝚈𝙸𝙽𝙶`\n"
             + f"🎧 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ✘** {message.from_user.mention}",
+           [
+                InlineKeyboardButton("⏹", "leave"),
+                InlineKeyboardButton("⏸", "puse"),
+                InlineKeyboardButton("▶️", "resume"),
+                InlineKeyboardButton("⏭", "skip"),
+            ],
             reply_markup=keyboard,
         )
         os.remove("final.png")
