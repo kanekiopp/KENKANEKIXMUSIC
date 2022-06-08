@@ -1,9 +1,3 @@
-import aiohttp
-from io import BytesIO
-from traceback import format_exc
-from pyrogram.types import Message
-from pyrogram import Client, filters
-from Process.main import bot as app
 
 ARQ_API_KEY = "TTWOWA-MDXMRU-FITNFK-PMHTTB-ARQ"
 aiohttpsession = aiohttp.ClientSession()
