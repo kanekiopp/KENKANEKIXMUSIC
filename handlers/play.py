@@ -590,6 +590,12 @@ async def ytplay(_, message: Message):
         pass
     keyboard = InlineKeyboardMarkup(
         [
+         [
+                InlineKeyboardButton("⏹", "leave"),
+                InlineKeyboardButton("⏸", "puse"),
+                InlineKeyboardButton("▶️", "resume"),
+                InlineKeyboardButton("⏭", "skip"),
+            ],
             [
                 InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"),
                 InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls"),
