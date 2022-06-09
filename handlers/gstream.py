@@ -41,7 +41,7 @@ async def ghost(_, message: Message):
     audio = message.reply_to_message.audio if message.reply_to_message else None
     if not audio:
         return await lel.edit("💭 **please reply to a telegram audio file**")
-    if round(audio.duration / 20) > DURATION_LIMIT:
+    if round(audio.duration / 15) > DURATION_LIMIT:
         return await lel.edit(
             f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
         )
