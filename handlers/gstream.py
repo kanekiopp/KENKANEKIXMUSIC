@@ -20,7 +20,7 @@ from pytgcalls.types.input_stream import InputStream
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
-@Client.on_message(command(["kaneki", f"kaneki@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
 async def ghost(_, message: Message):
     costumer = message.from_user.mention
     lel = await message.reply_text("**Cᴏɴɴᴇᴄᴛɪɴɢ Tᴏ Kᴀɴᴇᴋɪ Sᴇʀᴠᴇʀ🔥**")
@@ -41,7 +41,7 @@ async def ghost(_, message: Message):
     audio = message.reply_to_message.audio if message.reply_to_message else None
     if not audio:
         return await lel.edit("💭 **please reply to a telegram audio file**")
-    if round(audio.duration / 15) > DURATION_LIMIT:
+    if round(audio.duration / 30) > DURATION_LIMIT:
         return await lel.edit(
             f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**"
         )
