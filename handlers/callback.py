@@ -419,7 +419,7 @@ async def cmdsyntax(_, query: CallbackQuery):
         f"""**ᴄᴍᴅ sʏɴᴛx** to play music on **Voice Chat:**
 
 • `/play (query)` - **For playing music directly via youtube**
-• `/play (query)` - **Play song using audio file of telegram**
+• `/kaneki (query)` - **Play audio using audio file of telegram**
 
 ⚡ __𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 {BOT_NAME}__""",
         reply_markup=InlineKeyboardMarkup(
