@@ -45,16 +45,16 @@ async def alive(client: Client, message: Message):
         photo=f"https://te.legra.ph/file/0644af761ab849220707a.jpg",
         caption=f"""**Hɪ I'ᴍ [{BOT_NAME}](https://t.me/{BOT_USERNAME})**
 
- **Gʜᴏsᴛ Mᴜsɪᴄ Wᴏʀᴋɪɴɢ Fɪɴᴇ
-**
+ **🥀KᴇɴKᴀɴᴇᴋɪ Mᴜsɪᴄ Wᴏʀᴋɪɴɢ Fɪɴᴇ**
 
- **Kᴇɴ Kᴀɴᴇᴋɪ Gʀᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ + Mᴜsɪᴄ Bᴏᴛ**
 
- **Oᴡɴᴇʀ [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
+ **🥀Kᴇɴ Kᴀɴᴇᴋɪ Gʀᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ + Mᴜsɪᴄ Bᴏᴛ**
 
- **Uᴘᴛɪᴍᴇ `{uptime}`**
+ **🥀Oᴡɴᴇʀ [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
 
-**Tʜᴀɴᴋs Fᴏʀ Usɪɴᴠ Mᴇ**""",
+ **🥀Uᴘᴛɪᴍᴇ `{uptime}`**
+
+ **🥀Tʜᴀɴᴋs Fᴏʀ Usɪɴɢ Mᴇ**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
