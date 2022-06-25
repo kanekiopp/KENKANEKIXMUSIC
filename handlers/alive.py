@@ -50,7 +50,7 @@ async def alive(client: Client, message: Message):
 
  **🥀Kᴇɴ Kᴀɴᴇᴋɪ Gʀᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ + Mᴜsɪᴄ Bᴏᴛ**
 
- **🥀Oᴡɴᴇʀ [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
+ **🥀Oᴡɴᴇʀ [Kᴇɴ Kᴀɴᴇᴋɪ](https://t.me/KENKANEKI_XD)**
 
  **🥀Uᴘᴛɪᴍᴇ `{uptime}`**
 
