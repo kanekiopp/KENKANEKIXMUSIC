@@ -6,8 +6,8 @@
 ## 𝙳𝙴𝙿𝙻𝙾𝚈 𝚃𝙾 𝚁𝙰𝙸𝙻𝚆𝙰𝚈 🚄
 𝙵𝙾𝚁 𝙳𝙴𝙿𝙻𝙾𝚈 𝙾𝙽 𝚁𝙰𝙸𝙻𝚆𝙰𝚈 𝙼𝙰𝙺𝙴 [𝙽𝙴𝙲𝙴𝚂𝚂𝙰𝚁𝚈 𝚅𝙰𝚁𝙸𝙰𝙱𝙻𝙴𝚂 𝙷𝙴𝚁𝙴](https://github.com/KENKANEKIOP/KENKANEKIXMUSIC), 𝚄 𝙷𝙰𝚅𝙴 𝚃𝙾 𝙵𝙸𝙻𝙻.
 
-[![Ghost+ᴅᴇᴘʟᴏʏ+ᴏɴ+ʀᴀɪʟᴡᴀʏ](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/kenkanekiop/KENKANEKIXMUSIC&envs=SESSION_NAME,BOT_TOKEN,BOT_USERNAME,ALIVE_NAME,ALIVE_IMG,BG_IMAGE,BOT_NAME,ASSISTANT_NAME,DATABASE_URL,LOG_CHANNEL,GROUP_SUPPORT,OWNER_ID,OWNER_NAME,PMPERMIT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT)
 
+[![ghost+ᴅᴇᴘʟᴏʏ+ᴏɴ+ʀᴀɪʟᴡᴀʏ](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/kenkanekiop/KENKANEKIXMUSIC&envs=SESSION_NAME,BOT_TOKEN,BOT_USERNAME,ALIVE_NAME,ALIVE_IMG,BG_IMAGE,BOT_NAME,ASSISTANT_NAME,DATABASE_URL,LOG_CHANNEL,GROUP_SUPPORT,OWNER_ID,OWNER_NAME,PMPERMIT,UPDATES_CHANNEL,API_ID,API_HASH,SUDO_USERS,DURATION_LIMIT)
 -------------------------------------------------
 
 ## 𝚃𝙰𝙺𝙴 𝚂𝚃𝚁𝙸𝙽𝙶 𝙵𝚁𝙾𝙼 𝙷𝙴𝚁𝙴 - 
